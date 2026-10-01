@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react'
 import heroImg from './assets/hero.png'
 import './App.css'
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8087'
-const API_URL = `${API_BASE_URL}/api/products`
-const LOGIN_URL = `${API_BASE_URL}/api/login`
-const REGISTER_URL = `${API_BASE_URL}/api/register`
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8087/api'
+const API_URL = `${API_BASE_URL}/products`
+const LOGIN_URL = `${API_BASE_URL}/login`
+const REGISTER_URL = `${API_BASE_URL}/register`
 const emptyForm = { product_name: '', description: '', price: '', quantity: '' }
 
 function LoginScreen({ onLogin, onCreateAccount, notice }) {
